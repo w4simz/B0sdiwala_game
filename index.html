@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bh0sdiwala Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MENU -->
+  <div id="menu" class="screen">
+    <h1>Lund paglu🥵</h1>
+    <p>Select Randi</p>
+
+    <div class="skins">
+      <button onclick="selectSkin('#22d3ee')">MEDUSA</button>
+      <button onclick="selectSkin('#f43f5e')">XUNER</button>
+      <button onclick="selectSkin('#a855f7')">YUN YUN</button>
+    </div>
+
+    <button class="main-btn" onclick="startGame()">START</button>
+   <h2 style="font-size: 15px;">⚠️ PLEASE USE EARPHONE OR 
+              EARBUDS</h2>
+  </div>
+
+  <!-- GAME -->
+  <canvas id="game"></canvas>
+
+  <!-- GAME OVER -->
+  <div id="gameover" class="screen">
+    <h1>Choti Nunni Wale😂</h1>
+    <p id="finalScore"></p>
+    <button class="main-btn" onclick="restartGame()">RESTART</button>
+    <h2 style="font-size: 15px;">Chii Itna Jaldi nikal gaya tera😂</h2>
+  </div>
+
+  <script src="game.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</body>
+</html>
